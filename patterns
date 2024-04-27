@@ -1,0 +1,426 @@
+This is my own solutions for pattern solving questions in apna college youtube channel
+
+
+first program to check the relation between input number and 10:
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int n;
+    cin>>n;
+    if(n<10){
+        cout<<"Number is less than 10\n";
+    }
+    else if(n>10){
+        cout<<"the number is larger"<<endl;
+    }
+    else
+    cout << "Hello, World!";
+
+    return 0;
+}
+
+
+
+program to check the divisibility by 2 , 3
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int n;
+    cin>>n;
+    if(n<10){
+        cout<<"Number is less than 10\n";
+    }
+    else if(n>10){
+        cout<<"the number is larger"<<endl;
+    }
+    else
+    cout << "Hello, World!";
+
+    return 0;
+}
+
+
+
+program to draw simple rectangle pattern after taking user input
+
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int rows;
+    int columns;
+    cin>>rows>>columns;
+    for (int i=0;i<rows;i++){
+        for (int h=0;h<columns;h++){
+            cout<<"* ";
+        }
+        cout<<"\n";
+    }
+
+    return 0;
+}
+
+
+
+program to daraw outline of rectangle
+my version:
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int rows;
+    int columns;
+    cin>>rows>>columns;
+   
+    for (int i=0;i<rows;i++){
+        if (i==0 || i==rows-1){
+          for (int h=0;h<columns;h++){
+            cout<<"* ";
+        }  }
+    else{
+        for (int h=0;h<columns;h++){
+        if (h==0 || h==columns-1){
+            cout<<"* ";
+        }
+        else
+        cout<<"  ";
+        }
+    }
+    cout<<"\n";
+    }
+    return 0;
+
+more simpler version:
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int rows;
+    int columns;
+    cin>>rows>>columns;
+   for (int i=0;i<rows;i++){
+        for (int h=0;h<columns;h++){
+        if(i==0 || i==rows-1 || h==0 || h==columns-1){
+            cout<<"* ";
+        }
+        else
+        cout<<"  ";
+    }
+    cout<<"\n";
+   }
+    return 0;
+}
+
+
+
+
+program for simple inverted half pyramid
+
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int rows;
+    cin>>rows;
+   for (int i=rows;i>0;i--){
+    for(int j=1;j<=i;j++){
+        cout<<"* ";
+    }
+    cout<<"\n";
+   }
+
+    return 0;
+}
+
+
+
+program for half pyramyd after rotation
+
+#include <iostream>
+using namespace std ;
+
+int main() {
+    // Write C++ code here
+    int a;
+    cin>>a;
+    for( int i=1;i<=a;i++){
+        for (int j=1;j<=a-i;j++){
+            cout<<" ";
+        }
+        for(int j=1;j<=i;j++){
+            cout<<"*";
+        }
+        cout<<"\n";
+    }
+
+    return 0;
+}
+
+
+program of half pyramid using numbers
+
+#include <iostream>
+using namespace std ;
+
+int main() {
+    // Write C++ code here
+    int a;
+    cin>>a;
+    for( int i=1;i<=a;i++){
+        for (int j=1;j<=i;j++){
+            cout<<i;
+        }
+        
+        cout<<"\n";
+    }
+
+    return 0;}
+
+program for floyds triangle
+
+#include <iostream>
+using namespace std ;
+
+int main() {
+    // Write C++ code here
+    int a;
+    int p=1;
+    cin>>a;
+    for( int i=1;i<=a;i++){
+        for (int j=1;j<=i;j++){
+            cout<<p<<" ";
+            p++;
+        }
+        
+        cout<<"\n";
+    }
+
+    return 0;
+}
+
+program for half butterfly
+
+#include <iostream>
+using namespace std ;
+
+int main() {
+    // Write C++ code here
+    int a;
+    cin>>a;
+    for( int i=1;i<=a;i++){
+        for (int j=1;j<=i;j++){
+            cout<<"* ";
+        }
+        for(int j=1;j<=a-i;j++){
+            cout<<"  ";
+        }
+        for (int j=1;j<=a-i;j++){
+            cout<<"  ";
+        }
+        for(int j=1;j<=i;j++){
+            cout<<"* ";
+        }
+
+        cout<<"\n";
+    }
+
+    return 0;
+}
+
+program for given simple pattern:
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a;
+    cin>>a;
+    for(int i=1;i<=a;i++){
+        for(int j=1;j<=i;j++){
+            cout<<i<<" ";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+
+
+The following are my codes for advanced pattern problems given in Apna college youtube channel.The link to the video is:https://www.youtube.com/watch?v=k9OlCJFy5yo&list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ&index=11
+
+
+q1.print the following pattern: 
+	1 2 3 4 5 
+	1 2 3 4 
+	1 2 3 
+	1 2 
+	1 
+
+ans)    #include <iostream>
+	using namespace std;
+
+	int main() 
+	{
+    	int a;
+    	cin>>a;
+    	for(int i=a;i>0;i--){
+      	for(int j=1;j<=i;j++){
+        cout<<j<<" ";
+      	}
+     	 cout<<"\n";
+   	 }
+    	return 0;
+	}
+
+q2.print the following pattern:
+	1 
+	0 1 
+	1 0 1 
+	0 1 0 1 
+	1 0 1 0 1 
+
+ans)    #include <iostream>
+	using namespace std;
+
+	int main() 
+	{
+    	int a;
+    	cin>>a;
+    	for(int i=1;i<a+1;i++){
+      	for(int j=1;j<=i;j++){
+        	if((i%2)==1){
+          	if(j%2==1){
+          	cout<<"1 ";
+          	}
+         	 else{
+            	cout<<"0 ";
+          	}
+        	}
+        	else{
+          	if(j%2==1){
+          	cout<<"0 ";
+          	}
+          	else{
+            	cout<<"1 ";
+          	}
+        	}
+      	}
+     	 cout<<"\n";
+    	}
+    	return 0;
+	}
+
+ans)   #include <iostream>
+	using namespace std;
+
+	int main() 
+	{
+    	int a;
+    	cin>>a;
+    	for(int i=1;i<a+1;i++){
+      	for(int j=1;j<=i;j++){
+        if((i+j)%2==1){
+          	cout<<" 1 ";
+          	}
+         else{
+            	cout<<" 0 ";
+          	}
+
+	}cout<<"\n";}return;}
+ 
+
+q3.print the given pattern
+	*****
+ 	 *****
+  	  *****
+   	   *****
+    	    *****
+
+ans)    #include <iostream>
+	using namespace std;
+
+	int main() 
+	{
+    	int a;
+    	cin>>a;
+    	for(int i=1;i<a+1;i++){
+      	for(int j=1;j<i;j++){
+        
+          cout<<" ";}
+       	for(int j=1;j<a+1;j++){
+        
+          cout<<"*";}   
+         
+        cout<<"\n";
+        }
+      
+    	return 0;
+	} 
+
+q4.print the given pattern: (input = 5)
+		 *****
+   		*****
+  	       *****
+ 	      *****
+	     *****
+
+ans)    #include <iostream>
+	using namespace std;
+
+	int main() 
+	{
+    	int a;
+    	cin>>a;
+    	for(int i=1;i<a+1;i++){
+      	for(int j=a;j>i;j--){
+        
+          cout<<" ";}
+       	for(int j=1;j<a+1;j++){
+        
+          cout<<"*";}   
+         
+        cout<<"\n";
+        }
+      
+    	return 0;
+	}
+
+q5.print the following pattern for input=5
+	    1 
+   	   1 2 
+  	  1 2 3 
+ 	 1 2 3 4 
+	1 2 3 4 5 
+
+ans ) small changes on previous code can print this pattern
+	#include <iostream>
+	using namespace std;
+
+	int main() 
+	{
+    	int a;
+    	cin>>a;
+    	for(int i=1;i<a+1;i++){
+      	for(int j=a;j>i;j--){
+        
+          cout<<" ";}
+       	for(int j=1;j<=i;j++){
+        
+          cout<<j<<" ";}   
+         
+        cout<<"\n";
+        }
+      
+    	return 0;
+	}
+
+q6.print the following pattern
